@@ -32,7 +32,6 @@ module display (pc, register, final, display1, display2, display3, display4, dis
 				4'b1101: display1 <= 7'b0100001; // D
 				4'b1110: display1 <= 7'b0000110; // E
 				4'b1111: display1 <= 7'b0001110; // F
-				//default: display1 <= 7'b1111111; // Exibir todos os segmentos acesos para valores inválidos 
 			endcase
 			//campo das dezenas do pc
 			case (pc[7:4])
@@ -51,8 +50,7 @@ module display (pc, register, final, display1, display2, display3, display4, dis
 				4'b1100: display2 <= 7'b1000110; // C
 				4'b1101: display2 <= 7'b0100001; // D
 				4'b1110: display2 <= 7'b0000110; // E
-				4'b1111: display2 <= 7'b0001110; // F
-				//default: display2 <= 7'b1111111; // Exibir todos os segmentos acesos para valores inválidos 
+				4'b1111: display2 <= 7'b0001110; // F 
 			endcase
 			//campo das unidades do registrador
 			case (register[3:0])
@@ -72,7 +70,6 @@ module display (pc, register, final, display1, display2, display3, display4, dis
 				4'b1101: display3 <= 7'b0100001; // D
 				4'b1110: display3 <= 7'b0000110; // E
 				4'b1111: display3 <= 7'b0001110; // F
-				//default: display3 <= 7'b1111111; // Exibir todos os segmentos acesos para valores inválidos  
 			endcase
 			//campo das dezenas do registrador
 			case (register[7:4])
@@ -92,7 +89,6 @@ module display (pc, register, final, display1, display2, display3, display4, dis
 				4'b1101: display4 <= 7'b0100001; // D
 				4'b1110: display4 <= 7'b0000110; // E
 				4'b1111: display4 <= 7'b0001110; // F
-				//default: display4 <= 7'b1111111; // Exibir todos os segmentos acesos para valores inválidos
 			endcase
 			//display para indicar se todas as intruções foram lidas
 			case (final)
@@ -112,7 +108,6 @@ module display (pc, register, final, display1, display2, display3, display4, dis
 				4'b1101: display5 <= 7'b0100001; // D
 				4'b1110: display5 <= 7'b0000110; // E
 				4'b1111: display5 <= 7'b0001110; // F
-				//default: display5 <= 7'b1111111; // Exibir todos os segmentos acesos para valores inválidos
 			endcase
 	end
 
