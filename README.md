@@ -39,8 +39,8 @@
 <img src="https://github.com/ManuelFerreira90/Caminho-de-dados-RISCV/assets/105729881/ae990cf0-05c0-4621-a2b7-34f76d1be31c">
 </div>
       
-        Limitação: a memória so contém apenas 32bits e acessos para endereços maiores que 32 
-                    o valor não sera computado, pois contamos com apenas 32 posições de memória
+        Limitação: a memória so contém apenas 32 posições e acessos para endereços maiores que 32 
+                    o valor não sera computado, pois contamos com apenas 32 posições de memória.
         
         Sobre:
         esse caminho de dados suportas as seguintes instruções:
@@ -83,4 +83,34 @@
 </div>
 <div align="center">
 <img src="https://github.com/ManuelFerreira90/Caminho-de-dados-RISCV/assets/105729881/7aecd68f-3509-4f30-908f-a50df1542764">
+</div>
+
+    Implementação na FPGA:
+        Na pasta FPGA_01 contém o projeto quartus para implementação do código verilog 
+        em uma FPGA.
+        
+        visão geral do nosso projeto em uma FPGA.
+<div align="center">
+<img src="https://github.com/ManuelFerreira90/Caminho-de-dados-RISCV/assets/105729881/2acee134-c46b-4fb9-be69-2c7e3a6e655c">
+</div>
+
+        Seta 1:
+            está localizado dois display de sete segmentos que irá algum registrador 
+            escolhido no código.
+
+        Seta 2:
+            está um display usado para sinalizar o final de todas as instruções, 
+            0 para caminho de dados em execução, 1 para todas as instruções foram executadas.
+
+        Seta 3:
+            mostra os displays representando o program counter.
+
+        O program counter e o registrador escolhido para mostrar nos displays são mostrados 
+        corretamente valores de 0 a 99.
+
+        Na linhas 116 do arquivo main.v poderá ser escolhido o registrador a 
+        ser mostrado nos display.
+        
+<div align="center">
+<img src="https://github.com/ManuelFerreira90/Caminho-de-dados-RISCV/assets/105729881/ab257b93-627e-4058-9581-2ab566931824">
 </div>
